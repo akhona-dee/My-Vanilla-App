@@ -12,12 +12,13 @@
     <meta name="viewport" 
     content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="src/style.css" />
-
     <title>Weather App</title>
 </head>
 <body>
     <div class="container">
-        <div class="weather-app">
+        <div class="weather-app-wrapper">
+         <div class="weather-app">
+        <div class="overview">
 <h1>
 Cape Town, South Africa    
  </h1>
@@ -29,29 +30,35 @@ Cape Town, South Africa
      Clear
     </li>
 </ul>
+</div>
 <div class="row">
     <div class="col-6">
+    <div class="d-flex weather-temperature">
         <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/956/original/sun_2698194.png?1691010209"
-        alt="Clear"/>
-        12°C | °F
+        alt="Clear"
+        class="d-flex"
+        />
+         <div class="d-flex"></div><strong>
+            12
+         </strong>
+       <span class="units">°C | <a style="text-decoration:none" href="#">°F</a>
+       </span>
+        </div>
     </div>
     <div class="col-6">
-        <ul>
-            <li>
-                Precipitation: 0%
-            </li>
-            <li>
+        <ul><li>
+            Precipitation: 0%
+            </li><li>
                 Humidity: 5%
-            </li>
-            
-            <li>
+            </li><li>
               Wind: 2km/h  
             </li>
         </ul>
     </div>
     </div>
+</div>
 <small>
-     <a href="https://github.com/akhona-dee/My-Vanilla-App" 
+     <a style="text-decoration:none" href="https://github.com/akhona-dee/My-Vanilla-App" 
     target="_blank"> Open-source code 
 </a>
  by Akhona Mxatule 
