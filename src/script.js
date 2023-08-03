@@ -23,7 +23,6 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-    console.log(response.data)
     let temperatureElement = document.querySelector("#temperature");
     let cityElement= document.querySelector("#city");
     let descriptionElement = document.querySelector("#description");
@@ -38,7 +37,19 @@ function displayTemperature(response) {
     dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
-let apiKey = "2acc350108ff9e6fedade269f2062324";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Cape Town&appid=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = "cabdbda40038ba7d1165b953b1c7bd6c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("Cape Town");
