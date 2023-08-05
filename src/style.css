@@ -10,11 +10,32 @@ h1 {
 
 body {
   font-family: Arial, sans-serif;
-  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/238/original/todd-desantis-RBa31iRYbfg-unsplash.jpg?1691226259);
+  background-color: #3D715F;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 20px;
 }
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: rgb(250, 249, 249);
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+  
+}
+
+li:first-letter {
+text-transform: capitalize; 
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 
 .weather-app-wrapper {
   max-width: 600px;
@@ -50,24 +71,3 @@ body {
   font-size: 16px;
   bottom: -3px;
 }
-
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  color: rgb(250, 249, 249);
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 19px;
-  
-}
-
-li:first-letter {
-text-transform: capitalize; 
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-

@@ -8,10 +8,14 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
     crossorigin="anonymous"
     />
+    <script src="https://kit.fontawesome.com/6d9144b5da.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" 
     content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css
+">
      <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
 </head>
@@ -30,13 +34,13 @@
             autocomplete="off"
             />
             </div>
-            <div class="col-3" 
+    
+            <div class="col-2" id="icon"
             value="search" 
             class="btn btn-primary w-100">
             <input 
             type="submit"
-            value="🔍"
-            id="search-btn"
+            value="Search"
             />
             </div>
             </div>
@@ -59,8 +63,10 @@
         class="d-flex"
         />
          <div class="d-flex"></div><strong id="temperature"></strong>
-       <span class="units">°C | <a style="text-decoration:none" href="#">°F</a>
-       </span>
+       <span class="units"
+                    ><a style= "text-decoration: none" href="#" id="celsius-link" class="active">°C</a> |
+                    <a style= "text-decoration: none" href="#" id="fahrenheit-link">°F</a></span
+                  >
         </div>
     </div>
     <div class="col-6">
