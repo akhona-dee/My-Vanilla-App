@@ -52,6 +52,21 @@ ul {
   margin-bottom: 20px;
 }
 
+
+#btn-srch {
+    margin-left: 10px;
+    background-color: #157cd6;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px 5px;
+    margin-top: 2px;
+}
+
+*, ::after, ::before {
+   box-sizing: border-box;
+}
+
+
 .weather-temperature img {
   margin-right: 10px;
   float: left;
