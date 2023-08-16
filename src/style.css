@@ -48,24 +48,19 @@ ul {
   border-radius: 10px;
 }
 
-.overview {
-  margin-bottom: 20px;
-}
-
 
 #btn-srch {
-    margin-left: 10px;
-    background-color: #157cd6;
+    margin-left: 20px;
     border: none;
     border-radius: 5px;
     padding: 5px 10px 5px;
     margin-top: 2px;
 }
 
-*, ::after, ::before {
-   box-sizing: border-box;
-}
 
+*, ::after, ::before {
+  box-shadow: none;
+}
 
 .weather-temperature img {
   margin-right: 10px;
