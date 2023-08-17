@@ -49,19 +49,6 @@ ul {
 }
 
 
-#btn-srch {
-    margin-left: 20px;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px 5px;
-    margin-top: 2px;
-}
-
-
-*, ::after, ::before {
-  box-shadow: none;
-}
-
 .weather-temperature img {
   margin-right: 10px;
   float: left;
