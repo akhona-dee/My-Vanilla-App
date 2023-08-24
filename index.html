@@ -27,35 +27,35 @@
     <title>Weather App</title>
 </head>
 <body>
-    <div class="container">
+     <div class="container">
         <div class="weather-app-wrapper">
-         <div class="weather-app">
-        <form id="search-form" class="mb-2">
+            <div class="weather-app">
+                <div class="search-panel">
+            <form  class="flex-nowrap"  id="search-form">
+            <div class="row ">
             <div class="search-text">
-            <div class="col-8">
-            <input
-            type="search" 
-            placeholder="Type your city here..."
-            class="form-control rounded-pill"
-            style="width: 400px;"
-            id="city-input"
+            <div class="col-6 px-1">
+            <input type="search" id="city-input" class="form-control search-bar"
+            placeholder="Enter your city here..."
             autocomplete="off" >
-            </form>
-
-            </div>
-            </div>
-        
-        <div class="overview">
-<h1 id="city"></h1>
-<ul>
-    <li> Last updated: <span id="date" ></span></li>
-    <li id="date">
-    </li>
-
-    <li id="description"></li>
-</ul>
+        </div>
+        <div class="col-2 px-1">
+            <input type="submit"value="search" class="form-control search-button">
+        </div>
+    </div>
 </div>
-<div class="row">
+</div>
+         </form>
+         
+        <div class="overview">
+            <h1 id="city"></h1>
+            <ul>
+                <li> Last updated: <span id="date" ></span></li>
+                <li id="date"></li>
+                <li id="description"></li>
+            </ul>
+        </div>
+        <div class="row">
     <div class="col-6">
     <div class="d-flex weather-temperature">
         <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/956/original/sun_2698194.png?1691010209"
@@ -68,7 +68,7 @@
                     <a style= "text-decoration: none" href="#" id="fahrenheit-link">°F</a></span>
         </div>
     </div>
-    <div class="col-6">
+    <div class="col-6" id="conditions">
         <ul>
             <li>
                 Humidity: <span id="humidity"></span>%</li>
