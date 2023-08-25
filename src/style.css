@@ -19,7 +19,7 @@ body {
 }
 
 small {
-  color: aliceblue;
+  color: #f0f8ff;
 }
 
 .container {
@@ -90,7 +90,7 @@ hr {
 .weather-app {
   border: 6px solid rgb(53, 79, 82, 0.7);
   padding: 30px;
-  margin: 20px auto;
+  margin: 30px auto;
   margin-bottom: 0;
   width: 600px;
   border-radius: 15px;
@@ -102,10 +102,14 @@ hr {
   
 }
 
-.weather-temperature img {
+.weather-temperature{
   margin-right: 10px;
   float: left;
   height: 64px;
+  background-color: #3D715F;
+  border: #022819;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 .weather-temperature strong {
   color: rgb(33, 33, 33);
@@ -113,12 +117,15 @@ hr {
   font-weight: 400;
   line-height: 1;
   text-align: left;
+  
+  
 }
 
 .weather-temperature .units {
-  position: relative;
+  
   font-size: 16px;
   bottom: -3px;
+  color:#022819;
 }
 
 .weather-forecast {
