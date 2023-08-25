@@ -14,7 +14,12 @@ body {
   background-color: #3D715F;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/094/603/original/peter-vanosdall-jhFabt6zfuI-unsplash.jpg?1692954687");
  
+}
+
+small {
+  color: aliceblue;
 }
 
 .container {
@@ -47,7 +52,7 @@ hr {
   border: none;
   border-radius: 10px;
   height: 8px;
-  background: black;
+  background: rgba(2, 21, 23, 0.7);
   margin-bottom: 50px;
     }
 
@@ -83,7 +88,7 @@ hr {
 }
 
 .weather-app {
-  border: 6px solid #2F3E46;
+  border: 6px solid rgb(53, 79, 82, 0.7);
   padding: 30px;
   margin: 20px auto;
   margin-bottom: 0;
@@ -92,7 +97,7 @@ hr {
   margin-top: 150px;
   font-family: 'Courier New', Courier, monospace;
   color: #52796F;
-  box-shadow: -14px -14px 0px 0px rgba(52, 77, 80, 0.9);  
+  box-shadow: -14px -14px 0px 0px rgba(60, 80, 52, 0.9);  
   background: rgb(202, 210, 197, 0.8);
   
 }

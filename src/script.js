@@ -22,7 +22,8 @@ function formatDate(timestamp) {
     return `${day} ${hours}: ${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = ` <div class="row">`;
@@ -54,6 +55,15 @@ forecastElement.innerHTML =forecastHTML;
 console.log(forecastHTML);
 }
 
+function getForecast(coordinates) {
+ console.log(coordinates) ;
+ let apiKey = "1fd8093fa5ff12d796d7de756cc9d6b9";
+ let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metrics`;
+ axios.get(apiUrl).then(displayForecast);
+ 
+ console.log(apiUrl);
+}
+
 function displayTemperature(response) {
     let temperatureElement = document.querySelector("#temperature");
     let cityElement= document.querySelector("#city");
@@ -61,17 +71,24 @@ function displayTemperature(response) {
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind");
     let dateElement = document.querySelector("#date");
-
+    let iconElement = document.querySelector("#icon")
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
     cityElement.innerHTML = response.data.name;
     descriptionElement.innerHTML = response.data.weather[0].description;
     humidityElement.innerHTML = response.data.main.humidity;
     windElement.innerHTML = Math.round(response.data.wind.speed);
     dateElement.innerHTML = formatDate(response.data.dt * 1000);
+    iconElement.setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+    iconElement.setAttribute("alt", response.data.weather[0].description);
+
+   getForecast(response.data.coord)
 }
 
 function search(city) {
-  let apiKey = "cabdbda40038ba7d1165b953b1c7bd6c";
+  let apiKey = "1fd8093fa5ff12d796d7de756cc9d6b9";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
@@ -83,7 +100,6 @@ function handleSubmit(event) {
 }
 search("Cape Town");
 
-displayForecast();
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
