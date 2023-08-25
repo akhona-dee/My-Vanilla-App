@@ -27,7 +27,7 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = ` <div class="row">`;
-  let days = ["Thu", "Fri", "Sat", "Sun"];
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon","Tue"];
   
   days.forEach(function(day) {
 
@@ -36,11 +36,7 @@ function displayForecast(response) {
       `
       <div class="col-2">
         <div class="weather-forecast-date">${day} </div>
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/953/original/cloud_2391401.png?1691010175"
-          alt=""
-          width="42px"
-        />
+        <img src="" alt="Clear" id="icon" class="float-left" />
         <div class="weather-forecast-temperatures">
           <span class="weather-forecast-temperature-max">18°</span>
           <span class="weather-forecast-temperature-min">12°</span>
@@ -58,7 +54,7 @@ console.log(forecastHTML);
 function getForecast(coordinates) {
  console.log(coordinates) ;
  let apiKey = "1fd8093fa5ff12d796d7de756cc9d6b9";
- let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metrics`;
+ let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
  axios.get(apiUrl).then(displayForecast);
  
  console.log(apiUrl);
@@ -98,37 +94,19 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
-search("Cape Town");
-
-
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
-
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
+search("Cape Town");
+
+
+
+
+
+
+
+
+
 
