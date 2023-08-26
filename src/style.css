@@ -32,7 +32,7 @@ li {
   margin-bottom: 10px;
   padding: 0;
   color: #022819;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 100;
   line-height: 19px;
 }
@@ -74,7 +74,6 @@ hr {
 
 }
 
-
 .search-bar, .search-button {
   border: 2px solid rgb(53, 79, 82, 0.7);
   background-color: rgb(255, 255, 255, 0.3);
@@ -84,13 +83,14 @@ hr {
 
 .weather-app-wrapper {
   max-width: 600px;
-  margin: 10px 15px;
+  margin: 20px 15px;
 }
 
 .weather-app {
   border: 6px solid rgb(53, 79, 82, 0.7);
   padding: 30px;
   margin: 30px auto;
+  margin-right: 20px;
   margin-bottom: 0;
   width: 600px;
   border-radius: 15px;
@@ -103,15 +103,15 @@ hr {
 }
 
 .weather-temperature{
-  margin-right: 10px;
-  float: left;
+  text-align: right;
+  float: right;
   height: 64px;
-  background-color: #3D715F;
   border: #022819;
   border-radius: 10px;
   margin-bottom: 20px;
 }
 .weather-temperature strong {
+  float: right;
   color: rgb(33, 33, 33);
   font-size: 64px;
   font-weight: 400;
@@ -125,6 +125,7 @@ hr {
   
   font-size: 16px;
   bottom: -3px;
+  align-content: normal;
   color:#022819;
 }
 
